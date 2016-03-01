@@ -1,0 +1,8 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <SwitchPreference
+        android:defaultValue="true"
+        android:key="serviceEnabled"
+        android:title="@string/block_numbers" />
+
+</PreferenceScreen>

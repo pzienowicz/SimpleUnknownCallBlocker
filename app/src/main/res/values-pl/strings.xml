@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Bloker nieznanych numerów</string>
+
+    <string name="enabled">Włączone</string>
+    <string name="disabled">Wyłączone</string>
+
+    <string name="block_numbers">Blokuj nieznane numery</string>
+    <string name="unknown_number_blocked">Zablokowano nieznany numer</string>
+</resources>
