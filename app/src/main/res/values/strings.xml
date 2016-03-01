@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">UnknownCallBlocker</string>
+    <string name="app_name">Unknown Call Blocker</string>
 
-    <string name="enabled">Włączone</string>
-    <string name="disabled">Wyłączone</string>
+    <string name="enabled">Enabled</string>
+    <string name="disabled">Disabled</string>
 
-    <string name="block_numbers">Blokuj nieznane numery</string>
-    <string name="unknown_number_blocked">Zablokowano nieznany numer</string>
+    <string name="block_numbers">Block unknown numbers</string>
+    <string name="unknown_number_blocked">Unknown number blocked</string>
 </resources>
