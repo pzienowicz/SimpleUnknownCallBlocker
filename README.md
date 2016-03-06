@@ -1,6 +1,6 @@
-# SimpleUnknownCallBlocker
+# Simple Unknown Call Blocker
 
-TODO description here
+Blocking unknown numbers has never been so easy!
 
 Download
 ==========
