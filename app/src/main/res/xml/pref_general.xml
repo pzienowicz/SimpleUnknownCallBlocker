@@ -5,4 +5,8 @@
         android:key="serviceEnabled"
         android:title="@string/block_numbers" />
 
+    <Preference
+        android:key="otherApps"
+        android:title="@string/other_apps"/>
+
 </PreferenceScreen>
