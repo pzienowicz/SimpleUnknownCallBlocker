@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">Unknown Call Blocker</string>
+    <string name="app_name">Private Call Blocker</string>
 
     <string name="enabled">Enabled</string>
     <string name="disabled">Disabled</string>
 
-    <string name="block_numbers">Block unknown numbers</string>
-    <string name="unknown_number_blocked">Unknown number blocked</string>
+    <string name="block_numbers">Block private/unknown numbers</string>
+    <string name="unknown_number_blocked">Private number blocked</string>
     <string name="other_apps">See recommended apps</string>
 </resources>
