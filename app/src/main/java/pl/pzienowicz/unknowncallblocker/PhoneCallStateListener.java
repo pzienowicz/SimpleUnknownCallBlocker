@@ -45,12 +45,13 @@ public class PhoneCallStateListener extends PhoneStateListener {
                 audioManager.setStreamMute(AudioManager.STREAM_RING, true);
 
                 try {
-                    if (incomingNumber.length() == 0) {
+                    if (incomingNumber == null || incomingNumber.length() == 0) {
                         createNotification();
                         endCall();
                     }
                 } catch (Exception e) {
-                    Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
+                    e.printStackTrace();
+//                    Toast.makeText(context, e.toString(), Toast.LENGTH_LONG).show();
                 }
 
                 //Turn OFF the mute
