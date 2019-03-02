@@ -3,8 +3,9 @@
     package="pl.pzienowicz.unknowncallblocker">
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.ANSWER_PHONE_CALLS"/>
+    <uses-permission android:name="android.permission.READ_CALL_LOG"/>
 
     <application
         android:allowBackup="true"
@@ -14,16 +15,19 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name="pl.pzienowicz.unknowncallblocker.SettingsActivity"
+            android:name="pl.pzienowicz.unknowncallblocker.activity.SettingsActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+            </intent-filter>
         </activity>
 
-        <receiver android:name="pl.pzienowicz.unknowncallblocker.PhoneCallReceiver">
+        <receiver android:name="pl.pzienowicz.unknowncallblocker.receiver.PhoneCallReceiver">
             <intent-filter android:priority="99999999">
                 <action android:name="android.intent.action.PHONE_STATE"/>
             </intent-filter>

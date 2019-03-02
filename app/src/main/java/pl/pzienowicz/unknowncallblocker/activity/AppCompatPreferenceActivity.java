@@ -1,4 +1,4 @@
-package pl.pzienowicz.unknowncallblocker;
+package pl.pzienowicz.unknowncallblocker.activity;
 
 import android.content.res.Configuration;
 import android.os.Bundle;

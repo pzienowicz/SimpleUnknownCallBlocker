@@ -1,12 +1,22 @@
-package pl.pzienowicz.unknowncallblocker;
+package pl.pzienowicz.unknowncallblocker.activity;
 
+import android.Manifest;
 import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.preference.Preference;
 import android.preference.PreferenceManager;
 import android.preference.SwitchPreference;
+
+import com.karumi.dexter.Dexter;
+import com.karumi.dexter.listener.multi.DialogOnAnyDeniedMultiplePermissionsListener;
+import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
+
+import java.util.ArrayList;
+
+import pl.pzienowicz.unknowncallblocker.R;
 
 public class SettingsActivity extends AppCompatPreferenceActivity {
 
@@ -42,6 +52,28 @@ public class SettingsActivity extends AppCompatPreferenceActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        MultiplePermissionsListener dialogMultiplePermissionsListener =
+                DialogOnAnyDeniedMultiplePermissionsListener.Builder
+                        .withContext(this)
+                        .withTitle("Phone permission")
+                        .withMessage("Phone permissions are needed to block private calls")
+                        .withButtonText(android.R.string.ok)
+                        .build();
+
+        ArrayList<String> permissions = new ArrayList<>();
+        permissions.add(Manifest.permission.READ_PHONE_STATE);
+        permissions.add(Manifest.permission.CALL_PHONE);
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            permissions.add(Manifest.permission.ANSWER_PHONE_CALLS);
+            permissions.add(Manifest.permission.READ_CALL_LOG);
+        }
+
+        Dexter.withActivity(this)
+                .withPermissions(permissions)
+                .withListener(dialogMultiplePermissionsListener)
+                .check();
 
         addPreferencesFromResource(R.xml.pref_general);
 
