@@ -2,8 +2,6 @@
 
 Blocking unknown numbers has never been so easy!
 
-APP is still under development.
-
 <!---
 <>Download
 ==========
